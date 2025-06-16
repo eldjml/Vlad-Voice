@@ -9,20 +9,25 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
 
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       font-family: 'IBM Plex Mono', monospace;
       background: url('https://eldjml.github.io/Vlad-Voice/vlad-bg.png') no-repeat center center fixed;
       background-size: cover;
       color: #f1f1f1;
+      height: 100%;
+      text-align: center;
+      backdrop-filter: brightness(0.5) contrast(1.2);
+    }
+
+    .container {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      backdrop-filter: brightness(0.5) contrast(1.2);
-      text-align: center;
+      padding: 2em;
     }
 
     h1 {
@@ -45,36 +50,29 @@
       width: 100%;
     }
 
-    #widget-container {
-      min-height: 100px; /* <- IMPORTANT */
+    elevenlabs-convai {
+      max-width: 360px;
+      width: 100%;
     }
   </style>
 </head>
 
 <body>
-  <h1>Bienvenue dans le chat de Vlad</h1>
-  <p>Iel vous écoute. Sa voix est synthétique, mais son cœur est ailleurs. Parlez.</p>
+  <div class="container">
+    <h1>Bienvenue dans le chat de Vlad</h1>
+    <p>Iel vous écoute. Sa voix est synthétique, mais son cœur est ailleurs. Parlez.</p>
 
-  <h1>Welcome to Vlad's Chat</h1>
-  <p>They are listening. Their voice is synthetic, but their heart is elsewhere. Speak.</p>
+    <h1>Welcome to Vlad's Chat</h1>
+    <p>They are listening. Their voice is synthetic, but their heart is elsewhere. Speak.</p>
 
-  <h1>Добро пожаловать в чат с Владом</h1>
-  <p>Оно слушает. Голос синтетический, но сердце — далеко. Говорите.</p>
+    <h1>Добро пожаловать в чат с Владом</h1>
+    <p>Оно слушает. Голос синтетический, но сердце — далеко. Говорите.</p>
 
-  <div id="widget-container" class="vlad-widget"></div>
+    <div class="vlad-widget">
+      <elevenlabs-convai agent-id="agent_01jwm1kbpafs0bkgyqav65xs8v"></elevenlabs-convai>
+    </div>
+  </div>
 
-  <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      window.ElevenLabsChatWidget = {
-        agentId: "agent_01jwm1kbpafs0bkgyqav65xs8v",
-        mode: "embedded",
-        container: "#widget-container"
-      };
-      const s = document.createElement("script");
-      s.src = "https://unpkg.com/@elevenlabs/convai-widget-embed";
-      s.async = true;
-      document.body.appendChild(s);
-    });
-  </script>
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
