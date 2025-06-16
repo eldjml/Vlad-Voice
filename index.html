@@ -65,10 +65,14 @@
     <p>Онo слушает. голос синтетический, но сердце — далеко. говорите.</p>
   </div>
 
-  <div class="vlad-widget">
-    <elevenlabs-convai agent-id="agent_01jwm1kbpafs0bkgyqav65xs8v"></elevenlabs-convai>
-  </div>
+<div class="vlad-widget" id="widget-container"></div>
 
-  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
-</body>
-</html>
+<script>
+  window.ElevenLabsChatWidget = {
+    agentId: "agent_01jwm1kbpafs0bkgyqav65xs8v",
+    mode: "embedded",
+    container: "#widget-container"
+  };
+</script>
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+
