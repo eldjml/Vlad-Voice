@@ -33,12 +33,13 @@
       background: rgba(0, 0, 0, 0.6);
       padding: 2em;
       border-radius: 16px;
-      max-width: 700px;
+      max-width: 90vw;
+      width: 700px;
       box-shadow: 0 0 20px rgba(0,0,0,0.8);
     }
 
     h1 {
-      font-size: 2em;
+      font-size: 1.8em;
       margin: 0.5em 0 0.2em;
       text-shadow: 0 0 12px #000;
     }
@@ -59,6 +60,18 @@
     elevenlabs-convai {
       max-width: 360px;
       width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.3em;
+      }
+      p {
+        font-size: 0.95em;
+      }
+      .text-block {
+        padding: 1.5em 1em;
+      }
     }
   </style>
 </head>
