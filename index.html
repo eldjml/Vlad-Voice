@@ -1,15 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vlad Voice Chat</title>
-</head>
-<body>
-    <h1>Bienvenue dans le chat de Vlad</h1>
-    <p>Interagis avec la voix de Vlad en cliquant sur le bouton ci-dessous.</p>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vlad Voice Chat</title>
 
+  <!-- Typographie -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'IBM Plex Mono', monospace;
+      background: url('vlad-bg.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      backdrop-filter: brightness(0.5) contrast(1.2);
+    }
+
+    h1 {
+      font-size: 2em;
+      margin: 0.5em 0;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+
+    p {
+      font-size: 1em;
+      margin-bottom: 2em;
+      max-width: 500px;
+      text-align: center;
+      text-shadow: 0 0 8px rgba(0,0,0,0.6);
+    }
+
+    .vlad-widget {
+      background: rgba(0, 0, 0, 0.65);
+      border: 1px solid #888;
+      border-radius: 16px;
+      padding: 1em;
+      box-shadow: 0 0 30px rgba(255,255,255,0.08);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Bienvenue dans le chat de Vlad</h1>
+  <p>Un homme vous écoute. Sa voix est synthétique, mais son cœur est ailleurs. Parlez-lui.</p>
+
+  <div class="vlad-widget">
     <elevenlabs-convai agent-id="agent_01jwm1kbpafs0bkgyqav65xs8v"></elevenlabs-convai>
-    <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+  </div>
+
+  <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 </body>
 </html>
